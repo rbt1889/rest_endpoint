@@ -1,0 +1,75 @@
+OBJECTIVES:
+
+- Create a REST endpoint at http://localhost:5000/total, that caulculates the sum of the members of a given list correctly and returns the result in JSON format 
+- Keep the usage of the third party libraries to a minimum
+
+*** The list is hard-coded inside rest_endpoint.py ***
+
+PREREQUISITES:
+
+- Python 3.6: The application is written using Python 3.6 therefore Python interpreter is needed to run the application.
+
+- Flask (http://flask.pocoo.org/): Flask is a microframework that runs on Python and allows creation of a web server, that listens to port 5000 by default. It does not require any third party tools or libraries.
+More info: https://realpython.com/tutorials/flask/
+
+- Python virtual environment: Virtual environment is needed to keep the packages for this application separate, in a location of our preference, so that there is no conflict with any other projects/packages. 
+
+INSTALLATION:
+
+- Python3 installation instructions: https://realpython.com/installing-python/
+- Create a project directory dedicated for this application.
+- Place 'rest_endpoint.py' and 'unit_tests.py' inside the project directory.
+
+From inside the project directory:
+
+- Enable virtual environment:
+
+$ python3 -m venv env
+
+- Activate the virtual environment:
+
+source env/bin/activate
+
+- Flask installation: 
+
+$ pip install Flask
+
+
+TESTING:
+(unit_tests.py)
+
+The 6 unit tests check the bahaviour of the application with 6 different list types: 
+ - current list hardcoded in the application;
+ - an empty list;
+ - list which is bigger than the maximum allowed size;
+ - list with mixed type elements;
+ - list with negative numbers.
+ - list with mixed number types, including integers and floats
+
+
+- While virtual environment is still active, run the unit test first, from the project directory:
+
+$ python3 unit_tests.py
+
+All 4 tests should pass
+
+RUNNING:
+(resst_endpoint.py)
+
+- While virtual environment is still active, run 'rest_endpoint.py' from within the project directory:
+
+$ python3 rest_endpoint.py
+
+- On a web-browser, navigate to: http://localhost:5000/total
+
+- After running the application, you can deactivate the virtual environment by running: 
+ 
+$ deactivate
+
+
+ASSUMPTIONS:
+
+- Application is run in an environment which supports Python3 and third-party libraries used
+- Application is run in an environment which allows HTTP requests to localhost and does not have any process occupying port 5000
+- This application will not have widespread use therefore testing is done only on code’s critical behaviours
+
