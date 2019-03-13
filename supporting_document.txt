@@ -43,15 +43,15 @@ The 6 unit tests check the bahaviour of the application with 6 different list ty
  - an empty list;
  - list which is bigger than the maximum allowed size;
  - list with mixed type elements;
- - list with negative numbers.
- - list with mixed number types, including integers and floats
+ - list with negative numbers;
+ - list with mixed number types, including integers and floats.
 
 
 - While virtual environment is still active, run the unit test first, from the project directory:
 
 $ python3 unit_tests.py
 
-All 4 tests should pass
+All 6 tests should pass
 
 RUNNING:
 (resst_endpoint.py)
